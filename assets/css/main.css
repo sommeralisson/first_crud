@@ -79,6 +79,22 @@ body {
   gap: 10px;
 }
 
+.container-login .container-credentials button {
+  width: 200px;
+  height: 50px;
+  margin: 0 20px 0;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: bold;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #0060d6;
+  background-color: #ffd900;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
 .container-login .container-credentials .content-user p {
   margin: 2px 12.5px;
   color: rgba(0, 0, 0, 0.6);
@@ -142,7 +158,27 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 50px;
+  padding: 0 30px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.container-login .footer-login a {
+  display: inline-block;
+  width: 120px;
+  height: 25px;
+  margin: 0 20px 0;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: bold;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #0060d6;
+  background-color: #ffd900;
+  cursor: pointer;
+  margin: 10px auto;
 }
 
 .container-login .footer-login button {

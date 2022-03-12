@@ -14,6 +14,23 @@ $text-small: 0.8rem;
 $text-medium: 1.5rem;
 $text-large: 2rem;
 
+@mixin small-a() {
+    display: inline-block;
+    width: 120px;
+    height: 25px;
+    margin: 0 20px 0;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(#000, 0.2);
+    color: $primary-dark-blue;
+    background-color: $primary-light-yellow;
+    cursor: pointer;
+}
+
 @mixin small-button() {
     width: 120px;
     height: 25px;
@@ -116,6 +133,11 @@ body {
         grid-template-rows: 100px 100px;
         gap: 10px;
 
+        button {
+            @include large-button();
+            margin: 10px auto;
+        }
+
         .content-user {
             p {
                 margin: 2px 12.5px;
@@ -167,7 +189,13 @@ body {
         align-items: center;
         justify-content: space-evenly;
         height: 50px;
+        padding: 0 30px;
         border-top: 1px solid rgba(#000, 0.2);
+
+        a {
+            @include small-a();
+            margin: 10px auto;
+        }
 
         button {
             @include small-button();
