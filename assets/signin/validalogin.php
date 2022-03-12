@@ -6,7 +6,7 @@
 
     if(!empty($dados['sendlogin'])) {
         $query_usuario = "SELECT id_usuario, nome, senha
-                            FROM usuariosaa
+                            FROM usuarios
                         WHERE nome = :nome
                         LIMIT 1";
         $result_usuario = $pdo->prepare($query_usuario);

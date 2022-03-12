@@ -33,12 +33,12 @@
                     <aside class="container-login">
                         <div class="header-login">
                             <div class="shape-login">
-                                <h2 class="text-large">Storage ASM</h2>
+                                <h2 class="text-large">Storage ASMM</h2>
                                 <p class="text-small">Sistema de Estoque</p>
                             </div>
                         </div>
                         <div class="description-login">
-                            <h2>Bem Vindoasdas</h2>
+                            <h2>Bem Vindo</h2>
                             <p>Para iniciar a sessão, por favor, insira os dados ou cadastre-se para prosseguir.</p>
                         </div>
                         <div class="container-credentials">
