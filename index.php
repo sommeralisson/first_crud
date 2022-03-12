@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(isset($_SESSION['msg'])) {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}
+?>
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +27,7 @@
         <img src="assets/img/background-login.jpg" class="background-img-login" alt="Imagem de fundo">
     </header>
     <main>
-        <form action="assets/validation/cadastro.php" method="POST" id="form-login" autocomplete="off">
+        <form action="assets/signin/validalogin.php" method="POST" id="form-login" autocomplete="off">
             <aside class="container-login">
                 <div class="header-login">
                     <div class="shape-login">
@@ -39,7 +49,7 @@
                         <input type="password" name="pass" placeholder="Insira sua senha...">
                     </div>
                     <div class="sign-login">
-                        <button type="submit" class="large-button" form="form-login">Iniciar sessão</button>
+                        <button type="submit" class="large-button" form="form-login" name="sendlogin" value="acessar">Iniciar sessão</button>
                     </div>
                 </div>
                 <div class="footer-login">
