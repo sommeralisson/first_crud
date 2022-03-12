@@ -36,7 +36,7 @@ if(isset($_SESSION['msg'])) {
                     </div>
                 </div>
                 <div class="description-login">
-                    <h2>Bem Vindo</h2>
+                    <h2>Bem Vindoaaaaaaaaaa</h2>
                     <p>Para iniciar a sessão, por favor, insira os dados ou cadastre-se para prosseguir.</p>
                 </div>
                 <div class="container-credentials">
