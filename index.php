@@ -44,14 +44,15 @@
                         <div class="container-credentials">
                             <div class="content-user">
                                 <p class="text-small">Username</p>
-                                <input type="text" name="user" placeholder="Insira seu usuário...">
+                                <input type="text" name="user" value="<?php if(isset($_SESSION['user'])){ echo $_SESSION['user']; unset($_SESSION['user']); }?>" placeholder="Insira seu usuário...">
                             </div>
                             <div class="content-pass">
                                 <p class="text-small">Password</p>
-                                <input type="password" name="pass" placeholder="Insira sua senha...">
+                                <input type="password" name="pass" value="<?php if(isset($_SESSION['pass'])){ echo $_SESSION['pass']; unset($_SESSION['pass']); }?>" placeholder="Insira sua senha...">
                             </div>
                             <div class="sign-login">
                                 <button type="submit" class="large-button" form="form-login" name="sendlogin" value="acessar">Iniciar sessão</button>
+                                <?php $x = 2;?>
                             </div>
                         </div>
                         <div class="footer-login">

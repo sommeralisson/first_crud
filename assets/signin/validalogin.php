@@ -17,12 +17,18 @@
             $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
 
             if(password_verify($dados['pass'], $row_usuario['senha'])) {
-                echo "Usuário logado!";
+                $_SESSION['id'] = $row_usuario['id_usuario'];
+                $_SESSION['nome'] = $row_usuario['nome'];
+                header("Location: ./dashboard.php");
             } else {
+                $_SESSION['user'] = $dados['user'];
+                $_SESSION['pass'] = $dados['pass'];
                 $_SESSION['msg'] = "Tá errado essa merda, escreve de novo!";
                 header("Location: ../../index.php");
             }
         } else {
+            $_SESSION['user'] = $dados['user'];
+            $_SESSION['pass'] = $dados['pass'];
             $_SESSION['msg'] = "Tá errado essa merda, escreve de novo!";
             header("Location: ../../index.php");
             exit;
