@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+/* MENU TOGGLE */
+#container.active {
+	width: 15.625rem;
+	background: #ff6903;
+	height: 100vh;
+}
+
+#container {
+	width: 4rem;
+	overflow-x: hidden;
+	background: #ff6903;
+	height: 100vh;
+	transition: 1s;
+}
+
+#container img{
+	filter: invert(100%) sepia(100%) saturate(10%) hue-rotate(87deg) brightness(119%) contrast(119%);
+	transition: 2s;
+}
+
+#container.active img {
+	filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(87deg) brightness(119%) contrast(119%);
+	transition: 2s;
+}
+
+#container.active #logo {
+	display: block;
+	transform: translateX(0px);
+	opacity: 1;
+	transition: 1s;
+	z-index: 10;
+}
+
+#container #logo{
+	transition: 1s;
+	transform: translateX(-80px);
+	opacity: 1;
+}
+
+#container.active #lista{
+	transition: 1.5s;
+	transform: translateX(0px);
+}
+
+#container #lista{
+	transform: translateX(-60px);
+	transition: 1.5s;
+	margin-right: 5px;
+}
+
+#container.active input[type=search]{
+	opacity: 1;
+	height: 3.1825rem;
+	width: 12rem;
+	margin-top: calc(4.75rem - 3rem);
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 1rem 2.5rem;
+	border: none;
+	border-radius: 0.8rem;
+	position: relative;
+	transition: 1s;
+}
+
+::placeholder {
+	color: white;
+}
+
+#container input[type=search]{
+	opacity: 0;
+	height: 2.5rem;
+	width: 1rem;
+	margin-top: calc(4.75rem - 3rem);
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 0.8rem;
+	border: none;
+	border-radius: 0.8rem;
+	position: relative;
+	transition: 1s;
+}
+
+#container a {
+	opacity: 0;
+	text-decoration: none;
+	transition: 1s;
+}
+
+#container.active a {
+	visibility: visible;
+	opacity: 1;
+	color: #f8f8f8;
+	text-decoration: none;
+	transition: 1s;
+}
+
+#container.active input[type=search]:focus{
+	outline: none;
+}
+
+#container.active img {
+	margin: 0 5px 0;
+}
+
+/* OUTROS ID */
+#container #sr {
+	position: absolute;
+	margin-top: 0.8rem;
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+#header-aside {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	height: 3rem;
+}
+
+/* CLASSES */
+.default-margin-top {
+	margin-top: 1.5rem;
+}
+
+/* SELECTORS */
+body {
+	background: #DCE4E3;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	margin-top: 2.5rem;
+}
+
+li div {
+	display: flex;
+	align-items: center;
+}
+
+ul li{
+	margin-left: 1.2rem;
+}
+
+aside main div {
+	margin-right: 0.8125rem;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
