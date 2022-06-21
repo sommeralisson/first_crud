@@ -9,7 +9,7 @@
 
     if((!isset($_SESSION['user'])) && (!isset($_SESSION['id']))) {
         $_SESSION['msg'] = '<p style="color:red;">Erro, necessário fazer o login para acessar a página!</p>';
-        header("Location: ../../index.php");
+        header("Location: ../../index");
     }
 ?>
 
@@ -22,6 +22,7 @@
 
             <title>First CRUD</title>
 
+            <link rel="icon" type="image/x-icon" href="https://demo.areacentral.com.br/401/imagens/ac16.png">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@
             <header>
             </header>
             <main>
-                <form action="assets/signin/validalogin.php" method="POST" id="form-login" autocomplete="off">
+                <form action="assets/login/valida_login.php" method="POST" id="form-login" autocomplete="off">
                     <aside class="container-login">
                         <div class="header-login">
                             <div class="shape-login">
@@ -43,7 +44,7 @@
                         </div>
                         <div class="description-login">
                             <h2>Bem Vindo!</h2>
-                            <a href="goout.php" class="button">Sair</a>
+                            <a href="valida_sair.php" class="button">Sair</a>
                         </div>
                     </aside>
                 </form>
@@ -53,6 +54,6 @@
             </footer>
 
             <!-- Link file Js -->
-            <script src="assets/js/script.js"></script>
+            <script src="../js/script.js"></script>
         </body>
     </html>

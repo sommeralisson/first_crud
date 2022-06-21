@@ -1,198 +1,168 @@
-.text-small {
-  font-size: 0.8rem;
-}
-
-.text-medium {
-  font-size: 1.5rem;
-}
-
-.text-large {
-  font-size: 2rem;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Poppins', 'Helvetica', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
 }
 
-header .background-img-login {
-  -webkit-filter: brightness(0.4);
-          filter: brightness(0.4);
+@font-face {
+	font-family: ProductSansItalic;
+	src: url(../font/Product-Sans-Italic.ttf);
+}
+
+@font-face {
+	font-family: ProductSansBold;
+	src: url(../font/Product-Sans-Bold.ttf);
+}
+
+@font-face {
+	font-family: ProductSansRegular;
+	src: url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-light.otf);
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+	width: 100%;
+	height: 100%;
 }
 
-.container-login {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  gap: 20px;
-  min-width: 500px;
-  min-height: 600px;
-  padding: 20px;
-  border-radius: 5rem;
-  position: absolute;
-  left: 75%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #d6e6ff;
-  z-index: 1;
+.header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	margin: 30px;
+	top: 0;
+	right: 0;
+	font-size: 14px;
 }
 
-.container-login .header-login {
-  width: 100%;
-  height: 120px;
+.header button {
+	background-color: rgb(255, 105, 3);
+	border: none;
+	color: white;
+	border-radius: 5px;
+	margin: 0 0 0 10px;
+	padding: 8px 25px;
+	cursor: pointer;
 }
 
-.container-login .header-login .shape-login {
-  width: 100%;
-  height: 120px;
-  padding: 20px;
-  text-align: center;
-  border-radius: 110px 110px 110px 0px;
-  background-color: #0060d6;
+main {
+	display: flex;
 }
 
-.container-login .header-login .shape-login h2, .container-login .header-login .shape-login p {
-  color: #f5f8ff;
+ul li {
+	margin: 20px 0;
 }
 
-.container-login .description-login {
-  text-align: center;
+.principal {
+	width: 80%;
+	min-height: 750px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.container-login .container-credentials {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 100px 100px;
-      grid-template-rows: 100px 100px;
-  gap: 10px;
+.container {
+	width: 100%;
+	height: 100%;
 }
 
-.container-login .container-credentials button {
-  width: 200px;
-  height: 50px;
-  margin: 0 20px 0;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-weight: bold;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  color: #0060d6;
-  background-color: #ffd900;
-  cursor: pointer;
-  margin: 10px auto;
+.instrucoes {
+	width: 27%;
+	min-height: 750px;
+	min-width: 400px;
+	height: 100vh;
+	background:
+	linear-gradient(
+		rgba(255, 105, 3, 0.7),rgba(255, 105, 3, 0.8)
+    ),
+    url(../img/supermercado.webp) no-repeat;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+	box-shadow: 1px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.container-login .container-credentials .content-user p {
-  margin: 2px 12.5px;
-  color: rgba(0, 0, 0, 0.6);
+.texto {
+	margin: 22% 10%;
+	font-size: 14px;
+	text-align: justify;
+	padding: 20px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	z-index: 10;
 }
 
-.container-login .container-credentials .content-user input[type="text"] {
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  border-radius: 25px;
-  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+.texto li {
+	list-style: none;
 }
 
-.container-login .container-credentials .content-pass p {
-  margin: 2px 12.5px;
-  color: rgba(0, 0, 0, 0.6);
+.texto h2 {
+	margin: 10px 0;
 }
 
-.container-login .container-credentials .content-pass input[type="password"] {
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  border-radius: 25px;
-  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+.rodape-icon img {
+	position: absolute;
+	bottom: 0;
+	margin: 10px;
 }
 
-.container-login .container-credentials .sign-login {
-  height: 80px;
+.login {
+	font-size: 25px;
+	min-width: 400px;
+	margin: 0 0 20% 0;
 }
 
-.container-login .container-credentials .sign-login button {
-  width: 200px;
-  height: 50px;
-  margin: 0 20px 0;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-weight: bold;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  color: #0060d6;
-  background-color: #ffd900;
-  cursor: pointer;
-  float: right;
+.login label {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.8);
 }
 
-.container-login .footer-login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  height: 50px;
-  padding: 0 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+.login h3 {
+	color: rgba(0, 0, 0, 0.8);
 }
 
-.container-login .footer-login a {
-  display: inline-block;
-  width: 120px;
-  height: 25px;
-  margin: 0 20px 0;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  border-radius: 20px;
-  font-weight: bold;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  color: #0060d6;
-  background-color: #ffd900;
-  cursor: pointer;
-  margin: 10px auto;
+.login img {
+	display: flex;
+	font-size: 13px;
+	margin: 60px auto;
 }
 
-.container-login .footer-login button {
-  width: 120px;
-  height: 25px;
-  margin: 0 20px 0;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-weight: bold;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  color: #0060d6;
-  background-color: #ffd900;
-  cursor: pointer;
+.login p {
+	margin: 5px 0 20px 0;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 14px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.login input[type="text"],
+.login input[type="password"] {
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	outline: none;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	margin-bottom: 10px;
+	transition: ease-in-out 0.3s;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+	outline: none;
+	border: 0.5px solid rgb(0, 132, 255);
+}
+
+::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.entrar {
+	float: right;
+	background-color: rgb(255, 105, 3);
+	border: none;
+	color: white;
+	border-radius: 5px;
+	width: 8rem;
+	height: 2.6rem;
+	cursor: pointer;
+}

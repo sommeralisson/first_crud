@@ -1,6 +1,7 @@
 <?php
     session_start();
     ob_start();
+    unset($_SESSION['nome']);
 
     if(isset($_SESSION['msg'])) {
         echo $_SESSION['msg'];
@@ -15,8 +16,9 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <title>First CRUD</title>
+            <title>ÁREA CENTRAL [ ÁREA CENTRAL ]</title>
 
+            <link rel="icon" type="image/x-icon" href="https://demo.areacentral.com.br/401/imagens/ac16.png">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -25,48 +27,49 @@
             <link rel="stylesheet" href="assets/css/main.css">
         </head>
         <body>
-            <header>
-                <img src="assets/img/background-login.jpg" class="background-img-login" alt="Imagem de fundo">
-            </header>
-            <main>
-                <form action="assets/signin/validalogin.php" method="POST" id="form-login" autocomplete="off">
-                    <aside class="container-login">
-                        <div class="header-login">
-                            <div class="shape-login">
-                                <h2 class="text-large">Storage ASMM</h2>
-                                <p class="text-small">Sistema de Estoque</p>
-                            </div>
+        <body>
+            <div class="container">
+                <main>
+                    <div class="header">
+                        <p>Precisa de ajuda?</p>
+                        <button class="suporte">Suporte</button>
+                    </div>
+                    <div class="instrucoes">
+                        <div class="texto">
+                            <h2>
+                                Instruções
+                            </h2>
+                            <ul>
+                                <li>Se você for administrador, associado ou fornecedor identifique-se ao lado, informando seu usuário e senha.</li>
+                                <li>Sua senha é de uso exclusivo, não divulgue a ninguém Não esqueça de sair do sistema após o uso.</li>
+                                <li>Se você não conseguir permanecer conectado ao sistema, verifique a configuração de cookies de seu navegador.</li>
+                            </ul>
                         </div>
-                        <div class="description-login">
-                            <h2>Bem Vindo</h2>
-                            <p>Para iniciar a sessão, por favor, insira os dados ou cadastre-se para prosseguir.</p>
+                        <div class="rodape-icon">
+                            <img src="./assets/img/logo-AC.png" alt="">
                         </div>
-                        <div class="container-credentials">
-                            <div class="content-user">
-                                <p class="text-small">Username</p>
-                                <input type="text" name="user" value="<?php if(isset($_SESSION['user'])){ echo $_SESSION['user']; unset($_SESSION['user']); }?>" placeholder="Insira seu usuário...">
-                            </div>
-                            <div class="content-pass">
-                                <p class="text-small">Password</p>
-                                <input type="password" name="pass" value="<?php if(isset($_SESSION['pass'])){ echo $_SESSION['pass']; unset($_SESSION['pass']); }?>" placeholder="Insira sua senha...">
-                            </div>
-                            <div class="sign-login">
-                                <button type="submit" class="large-button" form="form-login" name="sendlogin" value="acessar">Iniciar sessão</button>
-                                <?php $x = 2;?>
-                            </div>
+                    </div>
+                    <div class="principal">
+                        <div class="login">
+                            <form action="assets/login/valida_login.php" method="POST" id="form-login" autocomplete="off">
+                                <img src="https://demo.areacentral.com.br/401/empresas/demo/logo-demo.png" alt="">
+                                <h3>Entrar</h3>
+                                <p>Informe seu usuário e senha de acesso abaixo</p>
+                                <label for="usuario">
+                                    Usuário
+                                    <input type="text" name="user" value="<?php if(isset($_SESSION['user'])){ echo $_SESSION['user']; unset($_SESSION['user']); }?>" placeholder="Insira seu usuário...">
+                                </label>
+                                <br>
+                                <label for="senha">
+                                    Senha
+                                    <input type="password" name="pass" value="<?php if(isset($_SESSION['pass'])){ echo $_SESSION['pass']; unset($_SESSION['pass']); }?>" placeholder="Insira sua senha...">
+                                </label>
+                                <br>
+                                <button type="submit" class="entrar" form="form-login" name="sendlogin" value="acessar">Iniciar sessão</button>
+                            </form>
                         </div>
-                        <div class="footer-login">
-                            <p>Ainda não possui conta?</p>
-                            <a type="button" href="assets/signup/insereform.php">Criar conta</a>
-                        </div>
-                    </aside>
-                </form>
-            </main>
-            <footer>
-
-            </footer>
-
-            <!-- Link file Js -->
-            <script src="assets/js/script.js"></script>
+                    </div>
+                </main>
+            </div>
         </body>
     </html>
