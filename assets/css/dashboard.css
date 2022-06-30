@@ -5,6 +5,46 @@
 	font-family: 'poppins', sans-serif;
 }
 
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.cabecalho {
+	height: 60px;
+	width: calc(100% - 250px);
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	float: right;
+	background: white;
+	transition: ease 1s;
+	position: relative;
+}
+
+.cabecalho div {
+	margin: 0 10rem;
+}
+
+.cabecalho img {
+	width: 160px;
+}
+
+.principal {
+	position: absolute;
+	top: 100px;
+	width: calc(100% - 240px);
+	height: 800px;
+	margin: 0 120px !important;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 20px;
+}
+
+.width {
+	width: calc(100% - 64px);
+}
+
 /* MENU TOGGLE */
 #container.active {
 	width: 15.625rem;
@@ -89,6 +129,7 @@
 	opacity: 0;
 	text-decoration: none;
 	transition: 1s;
+	color: #f8f8f8;
 }
 
 #container.active a {
@@ -129,7 +170,7 @@
 
 /* SELECTORS */
 body {
-	background: #DCE4E3;
+	background: #f0f2f7;
 }
 
 li {

@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+!isset($_SESSION['nome']) ? header("Location: ../../index") : true;
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,10 +27,22 @@
 
 </head>
 <body>
-    <header>
-
-    </header>
-    <main>
+    <div>
+        <div id="cabecalho" class="cabecalho">
+            <div>
+                <img src="https://demo.areacentral.com.br/401/empresas/demo/logo-demo.png" alt="">
+            </div>
+            <div>
+                <a href="#">Usuário</a>
+            </div>
+            <div class="principal">
+                <section>
+                    <?= sprintf('<h2>Olá %s</h2>', $_SESSION['nome']); ?>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div>
         <aside>
             <section id="container" class="active">
                 <header id="header-aside">
@@ -50,31 +70,51 @@
                                 <img id="sr" src="../img/search.svg" alt="">
                             </li>
                             <li>
-                                <div><img src="../img/grid.svg" alt=""></div>
-                                <div><a href="#">Inicio</a></div>
+                                <div>
+                                    <img src="../img/grid.svg" alt="">
+                                </div>
+                                <div>
+                                    <a href="./dashboard.php">Inicio</a>
+                                </div>
                             </li>
                             <li>
-                                <div><img src="../img/pet.svg" alt=""></div>
-                                <div><a href="#">Perfil</a></div>
+                                <div>
+                                    <img src="../img/pet.svg" alt="">
+                                </div>
+                                <div>
+                                    <a href="#">Perfil</a>
+                                </div>
                             </li>
                             <li>
-                                <div><img src="../img/user.svg" alt=""></div>
-                                <div><a href="#">Cadastro</a></div>
+                                <div>
+                                    <img src="../img/user.svg" alt="">
+                                </div>
+                                <div>
+                                    <a href="#">Cadastro</a>
+                                </div>
                             </li>
                             <li>
-                                <div><img src="../img/vet.svg" alt=""></div>
-                                <div><a href="#">Ajuda</a></div>
+                                <div>
+                                    <img src="../img/vet.svg" alt="">
+                                </div>
+                                <div>
+                                    <a href="#">Ajuda</a>
+                                </div>
                             </li>
                             <li>
-                                <div><img src="../img/settings.svg" alt=""></div>
-                                <div><a href="#">Página</a></div>
+                                <div>
+                                    <img src="../img/settings.svg" alt="">
+                                </div>
+                                <div>
+                                    <a href="#">Página</a>
+                                </div>
                             </li>
                         </ul>
                     </nav>
                 </main>
             </section>
         </aside>
-    </main>
+    </div>
     <footer>
 
     </footer>
