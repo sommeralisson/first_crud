@@ -33,7 +33,7 @@ session_start();
                 <img src="https://demo.areacentral.com.br/401/empresas/demo/logo-demo.png" alt="">
             </div>
             <div>
-                <a href="#">Usuário</a>
+                <a href="./valida_sair.php" id="logout">Sair</a>
             </div>
             <div class="principal">
                 <section>

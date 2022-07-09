@@ -2,11 +2,6 @@
     session_start();
     ob_start();
     unset($_SESSION['nome']);
-
-    if(isset($_SESSION['msg'])) {
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +59,22 @@
                                     Senha
                                     <input type="password" name="pass" value="<?php if(isset($_SESSION['pass'])){ echo $_SESSION['pass']; unset($_SESSION['pass']); }?>" placeholder="Insira sua senha...">
                                 </label>
+                                <?php
+                                
+                                if(isset($_SESSION['msg'])) {
+
+                                    sleep(1);
+                            
+                                    $sHtml = printf('
+                                        <div class="msg-logout" id="logout">
+                                            %s
+                                        </div>
+                                    ', $_SESSION['msg']);
+                            
+                                    unset($_SESSION['msg']);
+                                }
+
+                                ?>
                                 <br>
                                 <button type="submit" class="entrar" form="form-login" name="sendlogin" value="acessar">Iniciar sessão</button>
                             </form>
@@ -71,5 +82,7 @@
                     </div>
                 </main>
             </div>
+
+            <script src="./assets/js/script_index.js"></script>
         </body>
     </html>

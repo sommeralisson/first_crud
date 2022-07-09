@@ -23,13 +23,13 @@
             } else {
                 $_SESSION['user'] = $dados['user'];
                 $_SESSION['pass'] = $dados['pass'];
-                $_SESSION['msg'] = "Tá errado essa merda, escreve de novo!";
+                $_SESSION['msg'] = "<span style='color:darkred'>Usuário ou senha inválidos</span>";
                 header("Location: ../../index.php");
             }
         } else {
             $_SESSION['user'] = $dados['user'];
             $_SESSION['pass'] = $dados['pass'];
-            $_SESSION['msg'] = "Tá errado essa merda, escreve de novo!";
+            $_SESSION['msg'] = "<span style='color:darkred'>Usuário ou senha inválido!</span>";
             header("Location: ../../index.php");
             exit;
         }

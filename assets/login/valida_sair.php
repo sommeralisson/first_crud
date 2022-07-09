@@ -2,6 +2,6 @@
 session_start();
 ob_start();
 unset($_SESSION['id'], $_SESSION['nome']);
-$_SESSION['msg'] = "<p style='color:green;'>Deslogado com sucesso!</p>";
+$_SESSION['msg'] = '<span style="color:darkgreen;">Deslogado com sucesso!</span>';
 
 header("Location: ../../index.php");
